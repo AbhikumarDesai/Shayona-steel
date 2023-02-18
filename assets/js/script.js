@@ -143,8 +143,8 @@ $(function () {
 
   // animation js --------------
 
-//   wow = new WOW();
-//   wow.init();
+  wow = new WOW();
+  wow.init();
 
 
   // counto--------------

@@ -14,6 +14,9 @@ body {
 .mfp-container {
   position: fixed;
 }
+a{
+  cursor: pointer ;
+}
 h1,
 h2,
 h3,
@@ -24,7 +27,7 @@ h6 {
 }
 
 .spacing {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 .ff_oswald {
   font-family: "Oswald", sans-serif;
@@ -65,12 +68,32 @@ h6 {
   text-transform: capitalize;
   font-weight: 500;
   transition: all 0.3s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.btn::before{
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 100px;
+  background-color: rgba(255, 181, 181, 0.371);
+  left: -50px;
+  top: 0;
+  animation: btn 5s infinite;
+  z-index: -1;
+}
+@keyframes btn {
+  50%{
+    left: 100%;
+  }
 }
 .btn:hover {
   color: rgb(255, 255, 255);
   background-color: rgb(255, 55, 55);
   border: 2px solid rgb(255, 255, 255);
 }
+
 .ex_heading {
   color: white;
   font-weight: 700;
@@ -140,6 +163,12 @@ header {
 }
 .navbar-brand{
     font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img{
+height: 72px;
+width: auto;
 }
 .navbar-brand span{
   font-weight: 600;
@@ -539,7 +568,36 @@ animation: img 3s infinite;
   height: 100px;
 }
 
+
 /* Testimonials part card  */
+.testimonial_part{
+  position: relative;
+}
+.bg_testi{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+.testimonials_card{
+  position: relative;
+  overflow: hidden;
+}
+.testimonials_card::before{
+position: absolute;
+content: "";
+height: 100px;
+width: 20px;
+transform: skew(-47deg);
+background: whitesmoke;
+top: 0;
+left: 0;
+}
+.testimonials_card:hover {
+  background-color:  rgb(12, 12, 12);
+}
 .testimonials_card{
   background-color: rgb(40, 40, 40);
   padding: 30px;
@@ -548,14 +606,20 @@ animation: img 3s infinite;
   margin: 20px auto;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.289);
+  transition: all 0.6s ease-in-out;
 }
 .testimonials_card .testi_card_out{
   text-align: center;
 }
 .testimonials_card .testi_card_out img{
   height: 100px;
-  width: 100px;
+  width: 100%;
+  max-width: 100px;
+  border-radius: 100%;
   display: inline-block;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 2 0px rgba(255, 255, 255, 0.332);
 }
 .testimonials_card .testi_text{
   margin-top:20px;
@@ -570,4 +634,106 @@ text-transform: capitalize;
 }
 .testimonials_card .testi_text p{
   color: white;
+}
+
+/* footer  */
+footer{
+  background: rgb(47, 47, 47);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+footer::before{
+  position: absolute;
+  content: "";
+  height: 500px;
+  width: 100px;
+  background: linear-gradient(to top,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.093));
+  top: 0;
+  left:0;
+  right: 0;
+  transform:translateX(-50%) skew(20deg);
+  left: 50%;
+  z-index: -1;
+}
+footer::after{
+  position: absolute;
+  content: "";
+  height: 500px;
+  width: 100px;
+  background: linear-gradient(to bottom,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0.093));
+  top: 0;
+  left:0;
+  right: 0;
+  transform:translateX(-50%) skew(20deg);
+  left: 60%;
+  z-index: -1;
+}
+footer p{
+  color: white;
+}
+footer img{
+  height: 100px;
+  width: auto;
+
+}
+footer ul{
+  padding-left: 0;
+  list-style: none;
+}
+footer p{
+  margin: 20px 0;
+  position: relative;
+  transition: all 0.5s ease-in ;
+}
+footer p:hover,
+footer p:hover a:hover,
+.last_footer a:hover{
+  color: rgb(255, 55, 55);
+}
+footer p a{
+  color: white;
+  text-decoration: none;
+  padding-left: 10px;
+  transition: all 0.3s ease-in ;
+  line-height: 30px;
+}
+
+.last_footer .fill{
+  background-color: rgba(255, 255, 255, 0.271);
+  height: 40px;
+  width: 40px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease-in ;
+  margin-right:15px ;
+}
+.last_footer a{
+  margin-bottom: 20px;
+  line-height: 35px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in ;
+}
+.icon_flex{
+  display: flex;
+  margin-top: 30px;
+}
+.icon_flex i:hover,
+.last_footer .fill:hover{
+  color: rgb(255, 55, 55);
+  background-color: rgba(0, 0, 0, 0.401);
+}
+.icon_flex i{
+  color: white;
+  font-size: 16px;
+  padding: 10px 14px;
+  background-color: rgba(255, 255, 255, 0.271);
+  border-radius: 100%;
+  margin-right: 10px;
+  transition: all 0.3s ease-in ;
+  cursor: pointer;
 }
