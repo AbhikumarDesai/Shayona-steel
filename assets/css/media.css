@@ -15,7 +15,17 @@
     }
 }
 @media screen and (max-width:992px) {
-
+    .navbar-collapse{
+        position: absolute;
+        top: 70px;
+        background-color: white;
+        left: 0;
+        right: 0;
+      }
+    .navbar-collapse .nav-item .nav-link{
+        color: black;
+        text-align: center;
+    }
 }
 @media screen and (max-width:991px) {
     .navbar-brand img{
@@ -26,15 +36,44 @@
     }
 }
 @media screen and (max-width:768px) {
-
+    .spacing{
+        padding: 75px 0;
+    }
+    .pb_100{
+        padding-bottom: 75px;
+    }
 }
 @media screen and (max-width:767px) {
+    .title_part h3{
+        font-size: 30px;
+    }
     .title_part span {
         font-size: 0;
     }
-   
+    .rating_part [class*="col-"]{
+        margin-bottom: 16px;
+    }
+    .rating_out img{
+        height: 60px;
+   }
+   .project_card h3{
+    font-size: 30px;
+   }
+   .project_card{
+    margin-bottom: 16px;
+    height: calc(100% - 16px);
+   }
+   .project_card p{
+    font-size: 18px;
+   }
 }
 @media screen and (max-width:575px) {
+    .spacing{
+        padding: 60px 0 ;
+    }
+    .pb_100{
+        padding-bottom: 60px;
+    }
     .animation_div::before{
         display: none;
     }
@@ -42,9 +81,28 @@
         font-size: 30px;
         line-height: 30px;
     }
+    .project_card h3{
+        font-size: 20px;
+    }
+    .project_card p{
+        font-size: 14px;
+    }
+    .project_card{
+        padding: 15px;
+    }
     .img_out_first .home_dicription p{
         font-size: 16px;
         line-height: 21px;
+    }
+    .title_part h3{
+        font-size: 20px;
+    }
+    .rating_card h3{
+        font-size: 18px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 20px;
     }
 }
 @media screen and (max-width:375px) {
