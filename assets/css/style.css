@@ -191,7 +191,6 @@ width: auto;
   transform: skew(20deg);
   border-bottom-left-radius: 8px;
   z-index: -1;
-  box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.1);
 }
 .navbar::after {
   position: absolute;
@@ -204,7 +203,6 @@ width: auto;
   transform: skew(-20deg);
   border-bottom-right-radius: 8px;
   z-index: -1;
-  box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.1);
 }
 .navbar-light .navbar-nav .nav-link {
   color: white;
@@ -232,7 +230,6 @@ width: auto;
   transition: all 0.3s ease-in;
 }
 .first_carousel .owl-stage-outer {
-  max-height: 680px;
   height: 100%;
   width: 100%;
 }
@@ -254,10 +251,9 @@ width: auto;
 }
 .img_out_first .home_dicription {
   position: absolute;
-  top: 35%;
-  left: 0%;
-  transform: translate(20%, -50%);
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-77%, -50%);
   max-width: 800px;
   width: 100%;
 }
@@ -475,7 +471,7 @@ width: auto;
 }
 .card_letest_project .card_text {
   position: absolute;
-  top: 100%;
+  bottom: -100%;
   text-align: center;
   background-color: rgb(255, 55, 55);
   left: 20px;
@@ -489,7 +485,8 @@ width: auto;
   transform: skewX(2deg) scale(1.1);
 }
 .card_letest_project:hover .card_text {
-  top: 67%;
+  bottom:0;
+  top: auto;
 }
 
 .card_text h3,
@@ -512,7 +509,7 @@ width: auto;
     background-color: rgb(239, 239, 239);
     position: relative;
 }
-.rating_part::before{
+/* .rating_part::before{
 position: absolute;
 content: "";
 background: url(../images/pattern_line_tear.png);
@@ -522,7 +519,7 @@ height: 100%;
 width: 100%;
 top: 0;
 right:0;
-}
+} */
 
 .rating_part .title_part p{
     color: rgb(137, 137, 137);
@@ -669,9 +666,6 @@ footer::after{
   left: 60%;
   z-index: -1;
 }
-footer p{
-  color: white;
-}
 footer img{
   height: 100px;
   width: auto;
@@ -683,6 +677,7 @@ footer ul{
 }
 footer p{
   margin: 20px 0;
+  color: white;
   position: relative;
   transition: all 0.5s ease-in ;
 }
@@ -690,6 +685,7 @@ footer p:hover,
 footer p:hover a:hover,
 .last_footer a:hover{
   color: rgb(255, 55, 55);
+  padding-left: 7px;
 }
 footer p a{
   color: white;
