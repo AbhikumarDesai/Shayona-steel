@@ -134,6 +134,14 @@
         font-size: 12px;
         line-height: 18px;
     }
+    .last_footer a .txt,
+    .last-footer p{
+        font-size: 12px;
+        line-height: 18px;
+      }
+      .last-footer p{
+        margin: 10px 0;
+      }
     .footer_logo_out{
         height: 80px;
         width: 80px;
