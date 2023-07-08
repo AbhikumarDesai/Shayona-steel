@@ -18,7 +18,8 @@
     .navbar-collapse{
         position: absolute;
         top: 70px;
-        background-color: white;
+        background: linear-gradient(163deg, #ffe4e4, white 50%);
+        box-shadow: inset 0 -5px 5px -5px #acacac;
         left: 0;
         right: 0;
       }
@@ -34,6 +35,9 @@
     .btn{
         padding: 12px 28px;
     }
+    .rating_card h3{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width:768px) {
     .spacing{
@@ -41,6 +45,9 @@
     }
     .pb_100{
         padding-bottom: 75px;
+    }
+    .rating_out img{
+        height: 70px;
     }
 }
 @media screen and (max-width:767px) {
@@ -56,6 +63,13 @@
     .rating_out img{
         height: 60px;
    }
+
+   .img_out_first .home_dicription{
+    max-width: 90%;
+    right: 15px;
+    left: 15px;
+    transform: translate(0px, -50%);
+   }
    .project_card h3{
     font-size: 30px;
    }
@@ -68,6 +82,12 @@
    }
 }
 @media screen and (max-width:575px) {
+    .navbar::before{
+        left: 22px;
+       }
+       .navbar::after{
+       right: 22px;
+    }
     .spacing{
         padding: 60px 0 ;
     }
@@ -104,7 +124,29 @@
         font-size: 14px;
         line-height: 20px;
     }
+    .last-footer{
+        flex-direction: column;
+        text-align: center;
+    }
 }
 @media screen and (max-width:375px) {
-
+    footer p a{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .footer_logo_out{
+        height: 80px;
+        width: 80px;
+    }   
+    .footer_logo_out img{
+        object-fit: contain;
+        width: 100%;
+    }
+    .icon_flex i{
+        padding: 6px 10px;
+    }
+    .rating_card::before{
+        height: 40px;
+        width: 40px;
+    }
 }
